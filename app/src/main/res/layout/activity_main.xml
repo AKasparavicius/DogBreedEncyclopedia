@@ -50,6 +50,14 @@
             android:minHeight="40dp"
             />
 
+        <Button
+            android:id="@+id/selectBreedButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="SELECT BREED"
+            android:visibility="gone"
+            />
+
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -29,6 +29,7 @@ class BreedViewModel : ViewModel() {
             ) {
                 if (response.isSuccessful) {
                     val breedsObject = response.body()
+
                     val breedList = breedsObject?.getAsJsonObject("message")?.keySet()?.toList()
                         ?: emptyList()
                     _breeds.value = breedList
