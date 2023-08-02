@@ -11,4 +11,8 @@ interface DogApiService {
 
     @GET("breed/{breedName}/images/random")
     fun getBreedPhoto(@Path("breedName") breedName: String): Call<DogApiResponse>
+
+    @GET("breed/{breedName}/images/random")
+    fun getRandomPicture(@Path("breedName") breedName: String): Call<DogApiResponse>
+
 }
