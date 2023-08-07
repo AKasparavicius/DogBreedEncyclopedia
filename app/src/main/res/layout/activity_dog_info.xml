@@ -1,55 +1,55 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DogInfoActivity">
+    android:fillViewport="true">
 
-    <LinearLayout
-
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#EAC696">
+
+        <LinearLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:orientation="vertical"
         android:padding="16dp"
-        tools:context="MainActivity"
-        android:background="#EAC696">
+        >
 
         <TextView
             android:id="@+id/breedSelected"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
             android:gravity="center"
             android:text="Breed selected"
-            android:textSize="36dp"
-            android:textStyle="bold">
-
-        </TextView>
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
 
         <ImageView
             android:id="@+id/breedImage"
             android:layout_width="335dp"
             android:layout_height="275dp"
-            android:layout_marginBottom="50dp"
-            android:src="@drawable/dog_paw" />
+            android:src="@drawable/dog_paw"
+            android:layout_marginBottom="50dp" />
 
         <Button
             android:id="@+id/generatePicture"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:hint="GENERATE A NEW PICTURE"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GENERATE A NEW PICTURE" />
 
         <Button
             android:id="@+id/backButton"
-            android:layout_marginTop="100dp"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:hint="GO BACK"
-            />
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="GO BACK"
+            android:layout_marginTop="100dp" />
 
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
