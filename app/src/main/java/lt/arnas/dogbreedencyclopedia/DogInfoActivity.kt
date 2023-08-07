@@ -30,6 +30,10 @@ class DogInfoActivity : AppCompatActivity() {
         binding.generatePicture.setOnClickListener {
             fetchRandomPicture(selectedBreed)
         }
+
+        binding.backButton.setOnClickListener {
+            finish()
+        }
     }
 
     private fun fetchBreedInformation(breed: String?) {
@@ -72,7 +76,7 @@ class DogInfoActivity : AppCompatActivity() {
     private fun fetchRandomPicture(breed: String?) {
         breed?.let {
             // Call the API to get a new random picture URL for the same breed
-            val randomPictureCall = RetrofitClient.dogApiService.getRandomPicture(it)
+            val randomPictureCall = RetrofitClient.dogApiService.getBreedPhoto(it)
             randomPictureCall.enqueue(object : Callback<DogApiResponse> {
                 override fun onResponse(
                     call: Call<DogApiResponse>,

@@ -35,17 +35,19 @@
             android:layout_marginBottom="50dp"
             android:src="@drawable/dog_paw" />
 
-        <TextView
-            android:id="@+id/breedInfo"
-            android:layout_width="match_parent"
-            android:layout_height="160dp"
-            android:text="Info about this breed" />
-
         <Button
             android:id="@+id/generatePicture"
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="GENERATE A NEW PICTURE"
+            />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_marginTop="100dp"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:hint="GO BACK"
             />
 
     </LinearLayout>
